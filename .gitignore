@@ -3,3 +3,11 @@
 ################################################################################
 
 /Blog.Models/obj/Debug
+/Blog.Models/bin/Debug
+/.vs/Blog
+/Blog.EpiServer/obj/Debug
+/Blog.EpiServer/bin
+/.vs/config
+/Blog.Interfaces/bin/Debug
+/Blog.Interfaces/obj/Debug
+/packages
