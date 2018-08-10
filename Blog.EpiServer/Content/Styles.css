@@ -1,0 +1,50 @@
+﻿@media only screen and (min-width: 576px) {
+    .video-feature-content-block-edit-area {
+        width: 576px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .video-feature-content-block-edit-area {
+        width: 768px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .video-feature-content-block-edit-area {
+        width: 992px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .video-feature-content-block-edit-area {
+        width: 1200px;
+    }
+}
+div.video-feature-content-block-edit-area > div {
+    width: 30%;
+    height: 400px;
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+    vertical-align: middle;
+}
+
+.Portfolio-Item-Height{
+    height: 100px;
+}
+div.Menu-Item > div {
+    display: inline-block;
+
+}
+.Menu-Item {
+    width: 100%;
+    vertical-align: middle;
+}
+.MyLink {
+    text-decoration: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+}
+body {
+    padding-top: 70px;
+}

@@ -1,0 +1,7 @@
+﻿@using EPiServer.Web.Mvc.Html
+
+@model Blog.Models.Blocks.MenuBlock
+
+<li class="nav-item">
+    <a class="nav-link" href="@Url.ContentUrl(Model.Url)">@Html.PropertyFor(x => x.Title)</a>
+</li>

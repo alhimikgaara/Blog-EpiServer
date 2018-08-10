@@ -1,13 +1,40 @@
 ﻿@using EPiServer.Web.Mvc.Html
-@using EPiServer.ServiceLocation;
-@using EPiServer;
+@using System.Web.Optimization;
 
 @model Blog.Models.Pages.StandardPage
-<div>
-    @Html.PropertyFor(m => m.Title)
-    @Html.PropertyFor(m => m.MainBody)
-    @Html.PropertyFor(m => m.ArticleBlock)
-
-    <div style="width:32%;display:inline-block;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Blog-EpiServer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    @Html.PropertyFor(m => m.MenuArea, new { CssClass = "Menu-Item" })
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="my-4">
+            @Html.PropertyFor(m => m.Title)
+        </h1>
+        <div class="row">
+            @Html.PropertyFor(m => m.ArticlesArea, new { CssClass = "video-feature-content-block-edit-area" })
+        </div>
     </div>
-</div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

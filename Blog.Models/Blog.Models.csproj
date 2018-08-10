@@ -181,6 +181,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blocks\MenuBlock.cs" />
     <Compile Include="Blocks\StandardPage\Articles\ArticleBlock.cs" />
     <Compile Include="Blocks\StandardPage\Comments\CommentBlock.cs" />
     <Compile Include="Media\ImageFile.cs" />

@@ -2,8 +2,16 @@
 
 @model Blog.Models.Blocks.StandardPage.Articles.ArticleBlock
 
-<div>
-    <h1>@Html.PropertyFor(x => x.Title)</h1>
-    <h3>@Html.PropertyFor(x => x.Description)</h3>
-    <img src="@Url.ContentUrl(Model.Image)" />
+<div class="card Portfolio-Item-Height">
+    <div class="card-body">
+        <h4 class="card-title">
+            <a href="#">
+                @Html.PropertyFor(x => x.Title)
+            </a>
+        </h4>
+        <p class="card-text">
+            @Html.PropertyFor(x => x.Description)
+        </p>
+    </div>
+    <a href="#"><img class="card-img-bottom" src="@Url.ContentUrl(Model.Image)" alt=""></a>
 </div>

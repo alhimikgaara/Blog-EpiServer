@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Blog.Models.Blocks;
 using Blog.Models.Blocks.StandardPage.Articles;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
@@ -19,20 +19,11 @@ namespace Blog.Models.Pages
             Order = 1)]
         public virtual XhtmlString Title { get; set; }
 
-        [CultureSpecific]
-        [Display(
-            Name = "Main body",
-            Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
-            GroupName = SystemTabNames.Content,
-            Order = 2)]
-        public virtual XhtmlString MainBody { get; set; }
-
-
-        [AllowedTypes(typeof(ArticleBlock))]
-        public virtual ContentReference ArticleBlock { get; set; }
-
         [AllowedTypes(AllowedTypes = new[] { typeof(ArticleBlock) })]
-        public virtual ContentArea ContentAreaList { get; set; }
+        public virtual ContentArea ArticlesArea { get; set; }
+
+        [AllowedTypes(AllowedTypes = new[] { typeof(MenuBlock) })]
+        public virtual ContentArea MenuArea { get; set; }
 
     }
 }
