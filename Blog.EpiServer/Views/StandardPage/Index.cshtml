@@ -1,8 +1,13 @@
 ﻿@using EPiServer.Web.Mvc.Html
+@using EPiServer.ServiceLocation;
+@using EPiServer;
 
 @model Blog.Models.Pages.StandardPage
-
 <div>
     @Html.PropertyFor(m => m.Title)
     @Html.PropertyFor(m => m.MainBody)
+    @Html.PropertyFor(m => m.ArticleBlock)
+
+    <div style="width:32%;display:inline-block;">
+    </div>
 </div>

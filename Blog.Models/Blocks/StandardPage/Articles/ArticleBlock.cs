@@ -11,7 +11,7 @@ namespace Blog.Models.Blocks.StandardPage.Articles
     {
         [CultureSpecific]
         [Display(
-            Name = "Name",
+            Name = "Title",
             Description = "Name field's Title",
             GroupName = SystemTabNames.Content,
             Order = 1)]
@@ -19,7 +19,7 @@ namespace Blog.Models.Blocks.StandardPage.Articles
 
         [CultureSpecific]
         [Display(
-            Name = "Name",
+            Name = "Description",
             Description = "Name field's Description",
             GroupName = SystemTabNames.Content,
             Order = 2)]

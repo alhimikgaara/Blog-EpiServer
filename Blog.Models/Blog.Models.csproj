@@ -182,6 +182,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Blocks\StandardPage\Articles\ArticleBlock.cs" />
+    <Compile Include="Blocks\StandardPage\Comments\CommentBlock.cs" />
     <Compile Include="Media\ImageFile.cs" />
     <Compile Include="Pages\StandardPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

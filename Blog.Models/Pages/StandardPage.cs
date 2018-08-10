@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Blog.Models.Blocks.StandardPage.Articles;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -24,6 +26,13 @@ namespace Blog.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 2)]
         public virtual XhtmlString MainBody { get; set; }
+
+
+        [AllowedTypes(typeof(ArticleBlock))]
+        public virtual ContentReference ArticleBlock { get; set; }
+
+        [AllowedTypes(AllowedTypes = new[] { typeof(ArticleBlock) })]
+        public virtual ContentArea ContentAreaList { get; set; }
 
     }
 }

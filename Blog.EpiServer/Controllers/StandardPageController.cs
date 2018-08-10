@@ -1,12 +1,11 @@
 ﻿using System.Web.Mvc;
-using Blog.Models.Pages;
 using EPiServer.Web.Mvc;
 
 namespace Blog.EpiServer.Controllers
 {
-    public class StandardPageController : PageController<StandardPage>
+    public class StandardPageController : PageController<Models.Pages.StandardPage>
     {
-        public ActionResult Index(StandardPage currentPage)
+        public ActionResult Index(Models.Pages.StandardPage currentPage)
         {
             return View(currentPage);
         }
